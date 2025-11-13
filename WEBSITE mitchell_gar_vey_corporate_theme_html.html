@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MitchellGarVey LLC — Strategy • Operations • Global Growth</title>
+  <meta name="description" content="MitchellGarVey LLC partners with leaders to expand globally, optimize operations, and build workforce ecosystems. Led by Devon G. Mitchell." />
+  <meta name="theme-color" content="#0b4a6f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MitchellGarVey LLC — Strategy • Operations • Global Growth">
+  <meta property="og:description" content="Strategy to execution with aerospace‑grade rigor and international reach.">
+  <meta property="og:image" content="https://mitchellgarvey.com/assets/og-image.jpg">
+  <link rel="canonical" href="https://mitchellgarvey.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Manual dark mode (overrides system preference) */
+    html.dark{ --bg:#0b1220; --text:#e6e8ee; --muted:#a3a8b4; --line:#1f2430; --card:#0f172a; --chip:#0e2233; --link:#8ecbff; }
+    html.dark body{ background:var(--bg); color:var(--text); }
+    html.dark .nav a{ color:var(--text); }
+    html.dark .card{ background:var(--card); border-color:#1f2633; }
+    html.dark .muted{ color:var(--muted); }
+    html.dark footer{ background:#0f1524; color:var(--muted); }
+
+    /* Accessibility: focus rings */
+    :where(a, button, [role="button"], input, textarea).focus-visible { outline: 3px solid rgba(14,124,191,.65); outline-offset: 2px; }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1220; --text:#e6e8ee; --muted:#a3a8b4; --line:#1f2430; --card:#0f172a; --chip:#0e2233; }
+      body{ background:var(--bg); color:var(--text); }
+      .nav a{ color:var(--text); }
+      .card{ background:var(--card); border-color:#1f2633; }
+      .muted{ color:var(--muted); }
+      footer{ background:#0f1524; color:var(--muted); }
+    }
+
+    :root{
+      /* ===== Brand palette (swap with your logo colors) ===== */
+      --brand:#0b4a6f;        /* primary */
+      --brand-2:#0e7cbf;      /* primary accent */
+      --brand-ink:#0a0a0a;    /* body text */
+      --brand-muted:#5b616e;  /* muted text */
+      --brand-line:#e7e9ee;   /* borders */
+      --brand-card:#f7f8fb;   /* cards */
+      --brand-chip:#eef6fb;   /* chips */
+      --brand-link:#0e6ab8;   /* links */
+
+      /* Base tokens */
+      --bg:#ffffff; --text:var(--brand-ink); --muted:var(--brand-muted); --line:var(--brand-line); --accent:var(--brand); --accent-2:var(--brand-2);
+      --card:var(--brand-card); --chip:var(--brand-chip); --link:var(--brand-link);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text); line-height:1.6;}
+    .serif{font-family: 'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}
+    .container{width:min(1200px,92%); margin:0 auto}
+
+    /* Header */
+    header{position:sticky; top:0; background:rgba(5,6,8,.96); color:var(--header-text); backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid rgba(148,163,184,.35); z-index:50}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:12px; align-items:center}
+    .brand-mark{width:28px; height:28px; border-radius:6px; background:linear-gradient(135deg, var(--accent), var(--accent-2))}
+    .nav a{color:var(--header-text); text-decoration:none; margin:0 12px; font-weight:600}
+    .nav a:hover{color:var(--accent-2)}
+    .cta{display:inline-block; padding:10px 16px; border-radius:999px; background:var(--accent); color:#fff; font-weight:700}
+    .cta:hover{background:var(--accent-2)}
+
+    /* Hero */
+    .hero{padding:64px 0 24px; border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:36px; align-items:center}
+    .eyebrow{letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:var(--muted)}
+    h1{font-size:clamp(30px,3.8vw,56px); line-height:1.05; margin:8px 0 10px}
+    .lead{font-size:clamp(16px,1.4vw,20px); color:#2f333a; max-width:52ch}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .chip{background:var(--chip); color:#0b3a57; border:1px solid #d8ecf7; padding:6px 10px; border-radius:999px; font-size:12px}
+    .statbar{display:flex; gap:24px; margin-top:18px; color:var(--muted)}
+
+    /* Trust bar */
+    .trust{padding:22px 0; border-bottom:1px solid var(--line); background:#fafafc}
+    .trust-row{display:flex; align-items:center; gap:30px; justify-content:space-between; flex-wrap:wrap}
+    .trust b{color:#1b1f27}
+    .logo{width:110px; height:28px; background:#e6e9f0; border-radius:4px}
+
+    /* Sections */
+    section{padding:56px 0}
+    .section-title{font-size:clamp(22px,2.2vw,34px); margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px}
+    .card h3{margin:8px 0 8px}
+    .list{margin:0; padding-left:18px}
+
+    /* Insights */
+    .insights{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:18px}
+    .post{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden}
+    .post img{width:100%; height:160px; object-fit:cover; display:block}
+    .post .p{padding:14px}
+    .tag{font-size:12px; color:#0e3861; background:#e7f1fb; border:1px solid #d5e6fb; padding:4px 8px; border-radius:999px}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line); background:#050608; padding:32px 0; color:#e5e7f0}
+    .fgrid{display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:22px}
+    .fcol a{display:block; margin:8px 0; color:#2f333a; text-decoration:none}
+    .small{font-size:12px; color:#6b7280}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .insights{grid-template-columns:1fr}
+      .fgrid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <a href="#services" class="small" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.width='auto';this.style.height='auto';this.style.background='#fff';this.style.padding='6px 10px';this.style.zIndex='999'">Skip to main content</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img src="/assets/logo.png" alt="MitchellGarVey LLC" style="height:28px" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-mark',ariaHidden:true}))">
+        <a href="#" style="font-weight:800">MitchellGarVey</a>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#insights">Insights</a>
+        <a href="#leadership">Leadership</a>
+        <a class="cta" href="https://calendly.com/devon-mitchell/30min" target="_blank" rel="noopener">Schedule a Call</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" class="cta" style="margin-left:12px; background:transparent; color:var(--link); border:1px solid var(--line); padding:8px 12px; border-radius:999px; font-weight:600">🌙 Dark</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Strategy to Execution</div>
+          <h1 class="serif">Global growth powered by aerospace‑precision operations.</h1>
+          <p class="lead">We partner with leaders to expand across borders, optimize supply chains, and build workforce ecosystems — delivering measurable results with the rigor of world‑class aerospace programs.</p>
+          <div class="chips" aria-label="Capabilities">
+            <span class="chip">Market access & export enablement</span>
+            <span class="chip">Operational & supply chain optimization</span>
+            <span class="chip">Workforce & ecosystem development</span>
+            <span class="chip">Public–private partnerships</span>
+          </div>
+          <div class="statbar">
+            <div><b class="serif" style="font-size:22px">20+ yrs</b><div class="small">Aerospace & global advisory</div></div>
+            <div><b class="serif" style="font-size:22px">$MM</b><div class="small">Operational efficiencies delivered</div></div>
+            <div><b class="serif" style="font-size:22px">Multi‑sector</b><div class="small">Aviation • Manufacturing • Logistics</div></div>
+          </div>
+          <p style="margin-top:16px"><a class="cta" href="#contact">Talk to an expert</a></p>
+        </div>
+        <div>
+          <div class="card">
+            <h3 class="serif" style="margin-top:0">What we do</h3>
+            <ul class="list">
+              <li>Design export strategies and unlock international demand</li>
+              <li>Engineer Lean transformations and resilient supply chains</li>
+              <li>Build education‑to‑employment talent pipelines</li>
+              <li>Mobilize PPPs that align industry, academia, and government</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust" aria-label="Affiliations and partners">
+      <div class="container trust-row">
+        <div class="small"><b>Trusted by leaders in</b> aerospace, advanced manufacturing, logistics, and public sector.</div>
+        <div class="logo" aria-hidden="true"></div>
+        <div class="logo" aria-hidden="true"></div>
+        <div class="logo" aria-hidden="true"></div>
+        <div class="logo" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title serif">How we help</h2>
+        <p class="muted">From strategy to implementation — every engagement includes impact metrics and ROI tracking.</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Market access & export enablement</h3>
+            <p>End‑to‑end international expansion: country prioritization, partner mapping, compliance readiness (ITAR/EAR awareness), and go‑to‑market execution.</p>
+          </article>
+          <article class="card">
+            <h3>Operational & supply chain optimization</h3>
+            <p>Lean Six Sigma, value stream mapping, vendor and logistics redesign, and performance dashboards to increase resilience and reduce cost‑to‑serve.</p>
+          </article>
+          <article class="card">
+            <h3>Workforce & ecosystem development</h3>
+            <p>Design talent systems, credentials, and PPPs that align industry demand with training supply — accelerating capacity and inclusive growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTORS -->
+    <section id="sectors" style="background:#fafafc; border-top:1px solid var(--line); border-bottom:1px solid var(--line)">
+      <div class="container">
+        <h2 class="section-title serif">Sectors we serve</h2>
+        <div class="grid-3">
+          <div class="card"><h3>Aerospace & Defense</h3><p>Production, MRO, compliance, and export pathways informed by hands‑on aerospace leadership.</p></div>
+          <div class="card"><h3>Advanced Manufacturing</h3><p>Process optimization, automation opportunities, and global market entry.</p></div>
+          <div class="card"><h3>Logistics & Infrastructure</h3><p>Supply chain resilience, port/airport collaboration, and PPP structuring.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights">
+      <div class="container">
+        <h2 class="section-title serif">Insights</h2>
+        <div class="insights">
+          <article class="post">
+            <img alt="Aerial view of cargo logistics" src="/assets/insights/insight-1.jpg" loading="lazy" decoding="async" fetchpriority="low" />
+            <div class="p">
+              <span class="tag">Trade</span>
+              <h3 class="serif">Unlocking new export corridors for U.S. manufacturers</h3>
+              <p class="muted">A practical framework for selecting priority markets, mapping partners, and de‑risking entry.</p>
+            </div>
+          </article>
+          <article class="post">
+            <img alt="Factory floor" src="/assets/insights/insight-2.jpg" loading="lazy" decoding="async" fetchpriority="low" />
+            <div class="p">
+              <span class="tag">Operations</span>
+              <h3 class="serif">Lean transformations that outlive the workshop</h3>
+              <p class="muted">Building cadence, KPIs, and habits that sustain double‑digit productivity gains.</p>
+            </div>
+          </article>
+          <article class="post">
+            <img alt="Students in a training lab" src="/assets/insights/insight-3.jpg" loading="lazy" decoding="async" fetchpriority="low" />
+            <div class="p">
+              <span class="tag">Workforce</span>
+              <h3 class="serif">Education‑to‑employment pipelines that work</h3>
+              <p class="muted">Designing credentialed pathways with industry, academia, and government.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership">
+      <div class="container">
+        <h2 class="section-title serif">Leadership</h2>
+        <div class="card" style="display:grid; grid-template-columns: 120px 1fr; gap:16px; align-items:center">
+          <div style="width:120px; height:120px; border-radius:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2))" aria-hidden="true"></div>
+          <div>
+            <h3 style="margin:0">Devon G. Mitchell</h3>
+            <p class="muted" style="margin:.2rem 0 .6rem">Founder & Chief Executive Officer</p>
+            <p>FAA A&P Licensed Engineer · Lean Six Sigma Certified · International Trade Strategist. 20+ years across Boeing, Sikorsky, and global trade advisory — delivering multimillion‑dollar efficiencies and building partnerships that connect industry, academia, and government.</p>
+            <p style="margin:.6rem 0 0"><a class="cta" href="https://calendly.com/devon-mitchell/30min" target="_blank" rel="noopener">Schedule a call</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="background:#fafafc; border-top:1px solid var(--line)">
+      <div class="container">
+        <div class="card" style="display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+          <div>
+            <h2 class="section-title serif" style="margin:0">Let’s build what’s next</h2>
+            <p class="muted" style="margin:.2rem 0 0">Book a 30‑minute strategy briefing with Devon G. Mitchell.</p>
+          </div>
+          <div>
+            <a class="cta" href="https://calendly.com/devon-mitchell/30min" target="_blank" rel="noopener" aria-label="Schedule a Strategy Call with Devon G. Mitchell">Schedule a Strategy Call</a>
+          </div>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" class="card" style="margin-top:16px">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px">
+            <label>Full Name
+              <input type="text" name="name" required aria-label="Full Name" style="width:100%; padding:10px; border-radius:10px; border:1px solid #d0d7e2" />
+            </label>
+            <label>Email
+              <input type="email" name="email" required aria-label="Email Address" style="width:100%; padding:10px; border-radius:10px; border:1px solid #d0d7e2" />
+            </label>
+          </div>
+          <label style="display:block; margin-top:12px">Message
+            <textarea name="message" rows="5" required aria-label="Your message" style="width:100%; padding:10px; border-radius:10px; border:1px solid #d0d7e2"></textarea>
+          </label>
+          <div data-netlify-recaptcha="true" style="margin-top:8px"></div>
+          <button class="cta" type="submit" style="margin-top:12px" aria-label="Send message via contact form">Send Message</button>
+          <p class="small">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
+        </form>
+
+        <!-- Newsletter sign-up -->
+        <form action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_U&id=YOUR_ID" method="post" class="card" style="margin-top:16px" aria-label="Newsletter sign-up">
+          <h3 class="serif" style="margin:0 0 8px">Get insights in your inbox</h3>
+          <p class="muted" style="margin:0 0 10px">Quarterly briefings on trade, operations, and workforce strategy.</p>
+          <div style="display:grid; grid-template-columns: 1fr auto; gap:12px; align-items:center">
+            <label style="margin:0">Email
+              <input type="email" name="EMAIL" required aria-label="Email for newsletter" style="width:100%; padding:10px; border-radius:10px; border:1px solid #d0d7e2" />
+            </label>
+            <button class="cta" type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+          </div>
+          <p class="small" style="margin-top:8px">We respect your privacy. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container fgrid">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <img src="/assets/logo-mitchellgarvey.png" alt="MitchellGarVey Logo" style="height:32px; width:auto;" />
+          <b>MitchellGarVey LLC</b>
+        </div>
+        <p class="small">Strategy • Operations • Global Growth</p>
+      </div>
+      <div class="fcol">
+        <b>Company</b>
+        <a href="#about">About</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#insights">Insights</a>
+      </div>
+      <div class="fcol">
+        <b>Services</b>
+        <a href="#services">What we do</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="fcol" id="privacy">
+        <b>Legal</b>
+        <a href="#" onclick="document.getElementById('privacy-modal').style.display='flex'">Privacy Policy</a>
+        <a href="#" onclick="document.getElementById('terms-modal').style.display='flex'">Terms of Service</a>
+      </div>
+    </div>
+    <div class="container" style="border-top:1px solid var(--line); margin-top:18px; padding-top:12px; display:flex; justify-content:space-between; flex-wrap:wrap">
+      <div class="small">© <span id="y"></span> MitchellGarVey LLC. All rights reserved.</div>
+      <div class="small"><a href="mailto:devon@MitchellGarVey.com">devon@MitchellGarVey.com</a></div>
+    </div>
+  </footer>
+
+  <!-- Simple modals for Privacy / Terms -->
+  <div id="privacy-modal" style="position:fixed; inset:0; display:none; background:rgba(0,0,0,.4); align-items:center; justify-content:center; z-index:1000">
+    <div class="card" style="max-width:720px; background:#fff">
+      <h2 class="section-title" style="margin-top:0">Privacy Policy</h2>
+      <p class="muted small">Last updated: <span id="pdate"></span></p>
+      <p>We collect basic contact information you voluntarily provide via the contact form (name, email, message). We use this information solely to respond to your inquiry and do not sell your personal data. For form handling and site analytics, we may use third‑party services that process data on our behalf subject to their privacy terms. You may request access, correction, or deletion by contacting <a href="mailto:devon@MitchellGarVey.com">devon@MitchellGarVey.com</a>.</p>
+      <ul>
+        <li>Data we collect: form submissions, basic analytics</li>
+        <li>How we use data: respond to inquiries, improve services</li>
+        <li>Retention: minimum necessary to fulfill the purpose</li>
+        <li>Security: reasonable administrative and technical safeguards</li>
+      </ul>
+      <p><a class="cta" href="#" onclick="document.getElementById('privacy-modal').style.display='none'">Close</a></p>
+    </div>
+  </div>
+  <div id="terms-modal" style="position:fixed; inset:0; display:none; background:rgba(0,0,0,.4); align-items:center; justify-content:center; z-index:1000">
+    <div class="card" style="max-width:720px; background:#fff">
+      <h2 class="section-title" style="margin-top:0">Terms of Service</h2>
+      <p>By using this site, you agree to use it for lawful purposes and not to infringe upon the rights of others. All content is provided “as is” without warranties. MitchellGarVey LLC is not responsible for any damages arising from use of the site. For any project engagement, a separate written agreement will govern scope, deliverables, fees, and obligations.</p>
+      <p><a class="cta" href="#" onclick="document.getElementById('terms-modal').style.display='none'">Close</a></p>
+    </div>
+  </div>
+
+  <!-- ===== Templates you can save as separate files ===== -->
+  <!-- thank-you.html -->
+  <!--
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank you — MitchellGarVey</title>
+    <style>body{margin:0; font-family:Inter, system-ui; background:#ffffff; color:#0a0a0a} .container{width:min(700px,92%); margin:80px auto} .cta{display:inline-block; padding:10px 16px; border-radius:999px; background:#0b4a6f; color:#fff; font-weight:700; text-decoration:none}</style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="serif">Message received ✅</h1>
+      <p>Thanks for getting in touch. We’ll reply shortly.</p>
+      <p><a class="cta" href="/">Back to home</a></p>
+    </main>
+  </body>
+  </html>
+  -->
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('pdate').textContent = new Date().toLocaleDateString();
+  </script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('pdate').textContent = new Date().toLocaleDateString();
+
+    // Theme toggle (optional hook)
+    (function(){
+      var key='mg-theme', prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var saved = localStorage.getItem(key);
+      if(saved==='dark' && !document.documentElement.classList.contains('dark')){
+        document.documentElement.classList.add('dark');
+      }
+    })();
+      // Theme toggle
+    (function(){
+      var key='mg-theme';
+      var btn=document.getElementById('theme-toggle');
+      if(!btn) return;
+      function setMode(mode){
+        if(mode==='dark'){
+          document.documentElement.classList.add('dark');
+          localStorage.setItem(key,'dark');
+          btn.setAttribute('aria-pressed','true');
+          btn.textContent='☀️ Light';
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem(key,'light');
+          btn.setAttribute('aria-pressed','false');
+          btn.textContent='🌙 Dark';
+        }
+      }
+      var saved=localStorage.getItem(key);
+      if(saved==='dark') setMode('dark');
+      btn.addEventListener('click', function(){
+        var isDark=document.documentElement.classList.contains('dark');
+        setMode(isDark?'light':'dark');
+      });
+    })();
+  </script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MitchellGarVey LLC",
+    "url": "https://mitchellgarvey.com/",
+    "logo": "https://mitchellgarvey.com/assets/logo.png",
+    "email": "devon@MitchellGarVey.com",
+    "sameAs": [],
+    "founder": {"@type":"Person","name":"Devon G. Mitchell"},
+    "department": [
+      {"@type":"Organization","name":"Market Access & Export Enablement"},
+      {"@type":"Organization","name":"Operational & Supply Chain Optimization"},
+      {"@type":"Organization","name":"Workforce & Ecosystem Development"}
+    ]
+  }
+  </script>
+
+</body>
+</html>
